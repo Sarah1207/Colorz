@@ -1,0 +1,325 @@
+@import "../styles/fonts/fonts.scss";
+@import "../styles/mediaqueries/mediaqueries.scss";
+@import "../styles/const/const.scss";
+
+//GENERAL
+body {
+  font-family: "HelveticaNeueMedium";
+  overflow-x: hidden;
+  line-height: 1.2 !important;
+}
+
+.only__desktop {
+  display: block;
+  @include for-tablet-and-mobile {
+    display: none;
+  }
+}
+
+.only__mobile {
+  display: none;
+  @include for-tablet-and-mobile {
+    display: block;
+  }
+}
+
+.project__title__h2 {
+  font-size: $big-font;
+  font-weight: $weight-large;
+  margin: 20px 0px;
+  @include for-tablet-and-mobile {
+    font-size: $big-font-mobile;
+  }
+}
+
+.orange__cta {
+  color: $white !important;
+  background-color: $orange !important;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $dark !important;
+  }
+}
+
+//HERO
+.hero {
+  position: relative;
+  text-align: $text-center;
+  height: 1500px;
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include for-tablet-and-mobile {
+    height: 700px;
+    background-image: url("../assets/hero_small.jpg");
+    padding: 0px $padding-x-for-mobile;
+  }
+  .hero__subtitle {
+    color: $orange;
+    font-size: $small-font;
+    font-weight: $weight-thin;
+    padding-top: 50px;
+    @include for-tablet-and-mobile {
+      padding-top: 20px;
+    }
+  }
+}
+
+//ORANGE CIRCLE
+.orange__circle {
+  width: 233px;
+  height: 233px;
+  border-radius: 50%;
+  background-color: $orange;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  position: absolute;
+  right: 7%;
+  top: 80%;
+  transform: rotate(10deg);
+  @include for-tablet-and-mobile {
+    width: 180px;
+    height: 180px;
+    top: 650px;
+  }
+  .orange__circle__title {
+    font-size: $medium-font;
+    font-weight: $weight-large;
+  }
+  .orange__circle__subtitle {
+    font-size: $big-font;
+    font-weight: $weight-large;
+    @include for-tablet-and-mobile {
+      font-size: $big-font-mobile;
+    }
+  }
+  .orange__circle__old__price {
+    font-size: $small-font;
+    font-weight: $weight-thin;
+  }
+}
+
+//TEXT
+.simple__text {
+  padding: 70px 25%;
+  text-align: $text-center;
+  font-size: $medium-font;
+  font-weight: $weight-large;
+  @include for-tablet-and-mobile {
+    padding: 70px $padding-x-for-mobile;
+  }
+  .simple__text__para {
+    padding-bottom: 20px;
+  }
+  .orange__cta__small {
+    @include for-tablet-and-mobile {
+      font-size: $small-font;
+    }
+  }
+}
+
+//PUDIQUE
+.pudique {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 710px;
+  @include for-tablet-and-mobile {
+    flex-direction: column;
+    height: auto;
+  }
+  .pudique__background {
+    background-image: url("../assets/pudique.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: center;
+    @include for-tablet-and-mobile {
+      height: 380px;
+    }
+  }
+  .pudique__item {
+    width: 50%;
+    @include for-tablet-and-mobile {
+      width: 100%;
+    }
+  }
+  .pudique__para {
+    font-size: $medium-font;
+    font-weight: $weight-thin;
+    @include for-tablet-and-mobile {
+      font-size: $small-font;
+    }
+  }
+  .pudique__position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 100px;
+    @include for-tablet-and-mobile {
+      padding: $padding-x-for-mobile;
+    }
+  }
+}
+
+//PRODUCTS
+.products {
+  margin: 70px 0px;
+  text-align: $text-center;
+  @include for-tablet-and-mobile {
+    margin: 0px;
+    padding: 0px $padding-x-for-mobile 40px;
+  }
+  .products__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    @include for-tablet-and-mobile {
+      flex-direction: column;
+      padding: 0px;
+    }
+  }
+  .products__list__item {
+    width: 30%;
+    @include for-tablet-and-mobile {
+      width: 100%;
+    }
+    .products__list__img {
+      width: 275px;
+      @include for-tablet-and-mobile {
+        width: 210px;
+      }
+    }
+    .products__list__legend {
+      font-size: $medium-font;
+      font-weight: $weight-large;
+      margin-bottom: 0.5rem;
+    }
+    .products__list__price {
+      font-size: $small-font;
+      font-weight: $weight-thin;
+    }
+  }
+}
+
+//FOOTER
+.footer {
+  background-color: $grey;
+  padding: 80px;
+  position: relative;
+  @include for-tablet-and-mobile {
+    padding: $padding-x-for-mobile;
+  }
+  .footer__logo__one {
+    width: 190px;
+    margin-bottom: 30px;
+    @include for-tablet-and-mobile {
+      width: 130px;
+    }
+  }
+  .footer__flex__global {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include for-tablet-and-mobile {
+      flex-direction: column;
+    }
+    .footer__flex_item__small {
+      width: 25%;
+      @include for-tablet-and-mobile {
+        width: 100%;
+        padding-bottom: 30px;
+      }
+      .footer__flex_title {
+        font-size: $medium-font;
+        font-weight: $weight-large;
+        margin-bottom: 0.5rem;
+      }
+      .footer__flex__subtitle {
+        font-size: $small-font;
+        font-weight: $weight-thin;
+        margin-bottom: 0rem;
+        color: $dark;
+      }
+    }
+    .footer__position__logo {
+      position: absolute;
+      right: 10%;
+      bottom: 25%;
+      @include for-tablet-and-mobile {
+        position: relative;
+        text-align: left;
+        margin-right: auto;
+      }
+      .footer__logo__two {
+        width: 85px;
+        @include for-tablet-and-mobile {
+          width: 100px;
+          padding-left: $padding-x-for-mobile;
+        }
+      }
+    }
+  }
+}
+
+//MODAL
+.modal__background {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #18181bae;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .modal__container {
+    z-index: 2;
+    margin: auto;
+    margin-top: 5%;
+    width: 60%;
+    height: 80%;
+    background-color: $white;
+    overflow-y: scroll;
+    @include for-tablet-and-mobile {
+      width: 80%;
+      height: 90%;
+    }
+    .modal__close {
+      font-size: $medium-font;
+      font-weight: $weight-thin;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .modal__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 100px;
+      text-align: center;
+      @include for-tablet-and-mobile {
+        padding: $padding-x-for-mobile;
+      }
+      .modal__content__icone {
+        width: 73px;
+        height: 73px;
+      }
+      .modal__content__para {
+        font-size: $medium-font;
+        font-weight: $weight-large;
+      }
+    }
+  }
+}

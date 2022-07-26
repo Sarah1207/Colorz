@@ -1,0 +1,18 @@
+@import '../mediaqueries/mediaqueries.scss';
+
+$orange: #F0380F;
+$dark: #18181B;
+$white: #FFFFFF;
+$grey: #F3F3F3;
+$small-font: 16px;
+$medium-font: 22px;
+$big-font: 52px;
+$big-font-mobile: 30px;
+$weight-large: 500;
+$weight-thin: 400;
+$text-center: center;
+$padding-x-for-mobile: 40px;
+
+@include for-tablet-and-mobile {
+  $big-font: 30px;
+}
